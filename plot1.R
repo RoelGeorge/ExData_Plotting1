@@ -8,7 +8,7 @@ colClasses = c("character", "character", rep("numeric",7) )
 ## reading the data using the variables  
 df <- read.table(fn, header=TRUE, sep=";", 
                  col.names=colNames, colClasses=colClasses, na.strings="?")
-## changing class of df$date and formatting it correctily
+## changing class of df$date and formatting it correctly
 df$date = as.Date(df$date, format="%d/%m/%Y")
 df = df[df$date >= as.Date("2007-02-01") & df$date<=as.Date("2007-02-02"),]
 ## creating plot1.png
